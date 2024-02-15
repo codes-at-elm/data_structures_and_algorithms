@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            int[] arr = { 3, 2, 1 };
+            Sort sort = new Sort(arr);
+            arr = sort.BubbleSortAscending();
         }
     }
 }
