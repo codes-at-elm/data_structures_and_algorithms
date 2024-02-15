@@ -15,7 +15,7 @@ namespace data_structure_and_algorithms
             Arr = arr;
         }
 
-        public int[] BubbleSortAscending()
+        public int[] BubbleSortAsc()
         {
             int temp = 0;
 
@@ -33,6 +33,34 @@ namespace data_structure_and_algorithms
             }
 
             return Arr;
+        }
+
+        public int[] BubbleSortAscRecursive(int n)
+        {
+            if (n == 1)
+                return Arr;
+
+            int temp = 0;
+            int count = 0;
+
+            for (int i = Arr.GetUpperBound(0); i >= 1; i--)
+            {
+                for (int j = 0; j <= i - 1; j++)
+                {
+                    if (Arr[j] > Arr[j + 1])
+                    {
+                        temp = Arr[j];
+                        Arr[j] = Arr[j + 1];
+                        Arr[j + 1] = temp;
+                        count++;
+                    }
+                }
+            }
+
+            if (count == 0)
+                return Arr;
+
+            return BubbleSortAscRecursive(n - 1);
         }
     }
 }

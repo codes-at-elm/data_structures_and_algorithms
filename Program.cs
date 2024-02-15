@@ -6,7 +6,8 @@
         {
             int[] arr = { 3, 2, 1 };
             Sort sort = new Sort(arr);
-            arr = sort.BubbleSortAscending();
+            //arr = sort.BubbleSortAsc();
+            arr = sort.BubbleSortAscRecursive(arr.Length);
         }
     }
 }
