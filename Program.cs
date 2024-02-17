@@ -49,6 +49,21 @@ namespace data_structure_and_algorithms
             Console.WriteLine($"Queue size: {queue.Count}");
             */
             #endregion
+
+            #region Palindrome
+            /*
+            // Test cases for IsPalindrome method
+            Console.WriteLine(Palindrome.IsPalindrome("Racecar")); // Should return true
+            Console.WriteLine(Palindrome.IsPalindrome("hello"));   // Should return false
+            Console.WriteLine(Palindrome.IsPalindrome("Madam"));   // Should return true
+            Console.WriteLine(Palindrome.IsPalindrome("12321"));   // Should return true
+
+            // Additional test cases that should return false
+            Console.WriteLine(Palindrome.IsPalindrome("apple"));   // Should return false
+            Console.WriteLine(Palindrome.IsPalindrome("12345"));   // Should return false
+            Console.WriteLine(Palindrome.IsPalindrome("Palindrome")); // Should return false
+            */
+            #endregion
         }
     }
 }
