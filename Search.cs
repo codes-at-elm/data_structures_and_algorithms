@@ -48,7 +48,7 @@ namespace data_structure_and_algorithms
         {
             if (lastElementIndex >= firstElementIndex)
             {                
-                int mid = (int)(lastElementIndex + firstElementIndex) / 2;
+                int mid = (lastElementIndex + firstElementIndex) / 2;
 
                 if (searchVal == arr[mid])
                     return mid;
