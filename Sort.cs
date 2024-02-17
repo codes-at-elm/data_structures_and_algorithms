@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace data_structure_and_algorithms
 {
-    internal class Sort
+    internal static  class Sort
     {
-        private void PrintArray(int[] arr)
+        private static void PrintArray(int[] arr)
         {
             Console.WriteLine(string.Join(" ", arr));
         }
-        public int[] BubbleSortAsc(int[] arr)
+        public static int[] BubbleSortAsc(int[] arr)
         {
             int temp = 0;
 
@@ -32,7 +32,7 @@ namespace data_structure_and_algorithms
             return arr;
         }
 
-        public int[] BubbleSortAscRecursive(int[] arr, int n)
+        public static int[] BubbleSortAscRecursive(int[] arr, int n)
         {
             if (n == 1)
                 return arr;
@@ -60,9 +60,9 @@ namespace data_structure_and_algorithms
             return BubbleSortAscRecursive(arr, n - 1);
         }
 
-        public int[] SelectionSortAsc(int[] arr)
+        public static int[] SelectionSortAsc(int[] arr)
         {
-            this.PrintArray(arr);
+            PrintArray(arr);
 
             int smallestIndex = 0;
             int temp = 0;
@@ -81,15 +81,15 @@ namespace data_structure_and_algorithms
                 arr[i] = arr[smallestIndex];
                 arr[smallestIndex] = temp;
 
-                this.PrintArray(arr);
+                PrintArray(arr);
             }
 
             return arr; 
         }
 
-        public int[] InsertionSortAsc(int[] arr)
+        public static int[] InsertionSortAsc(int[] arr)
         {
-            this.PrintArray(arr);
+            PrintArray(arr);
 
             int temp, j;
 
@@ -106,7 +106,7 @@ namespace data_structure_and_algorithms
 
                 arr[j] = temp;
 
-                this.PrintArray(arr);
+                PrintArray(arr);
             }
 
             return arr;

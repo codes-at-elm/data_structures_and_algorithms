@@ -5,11 +5,17 @@
         static void Main(string[] args)
         {
             int[] arr = { 64, 25, 12, 22, 11 };
-            Sort sort = new Sort();
-            //arr = sort.BubbleSortAsc(arr);
-            //arr = sort.BubbleSortAscRecursive(arr, arr.Length);
-            //arr = sort.SelectionSortAsc(arr);
-            arr = sort.InsertionSortAsc(arr);
+
+            #region Sorting            
+            //arr = Sort.BubbleSortAsc(arr);
+            //arr = Sort.BubbleSortAscRecursive(arr, arr.Length);
+            //arr = Sort.SelectionSortAsc(arr);
+            //arr = Sort.InsertionSortAsc(arr);
+            #endregion
+
+            #region Searching 
+            int index = Search.BinarySearch(Sort.BubbleSortAsc(arr), 64);
+            #endregion
         }
     }
 }
