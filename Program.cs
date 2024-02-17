@@ -8,7 +8,8 @@
             Sort sort = new Sort();
             //arr = sort.BubbleSortAsc(arr);
             //arr = sort.BubbleSortAscRecursive(arr, arr.Length);
-            arr = sort.SelectionSortAsc(arr);
+            //arr = sort.SelectionSortAsc(arr);
+            arr = sort.InsertionSortAsc(arr);
         }
     }
 }
