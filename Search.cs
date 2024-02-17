@@ -43,5 +43,23 @@ namespace data_structure_and_algorithms
 
             return -1;
         }
+
+        public static int BinarySearchRecursive(int[] arr, int searchVal, int firstElementIndex, int lastElementIndex)
+        {
+            if (lastElementIndex >= firstElementIndex)
+            {                
+                int mid = (int)(lastElementIndex + firstElementIndex) / 2;
+
+                if (searchVal == arr[mid])
+                    return mid;
+
+                if (searchVal < arr[mid])
+                    return BinarySearchRecursive(arr, searchVal, firstElementIndex, mid - 1);
+                else
+                    return BinarySearchRecursive(arr, searchVal, mid + 1, lastElementIndex);
+            }
+
+            return -1;
+        }
     }
 }

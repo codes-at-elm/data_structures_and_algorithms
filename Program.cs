@@ -14,7 +14,8 @@
             #endregion
 
             #region Searching 
-            int index = Search.BinarySearch(Sort.BubbleSortAsc(arr), 64);
+            //int index = Search.BinarySearch(Sort.BubbleSortAsc(arr), 64);
+            int index = Search.BinarySearchRecursive(Sort.BubbleSortAsc(arr), 25, 0, arr.Length - 1);
             #endregion
         }
     }

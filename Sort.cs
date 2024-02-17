@@ -7,11 +7,7 @@ using System.Threading.Tasks;
 namespace data_structure_and_algorithms
 {
     internal static  class Sort
-    {
-        private static void PrintArray(int[] arr)
-        {
-            Console.WriteLine(string.Join(" ", arr));
-        }
+    {        
         public static int[] BubbleSortAsc(int[] arr)
         {
             int temp = 0;
@@ -62,7 +58,7 @@ namespace data_structure_and_algorithms
 
         public static int[] SelectionSortAsc(int[] arr)
         {
-            PrintArray(arr);
+            Utility.PrintArray(arr);
 
             int smallestIndex = 0;
             int temp = 0;
@@ -81,7 +77,7 @@ namespace data_structure_and_algorithms
                 arr[i] = arr[smallestIndex];
                 arr[smallestIndex] = temp;
 
-                PrintArray(arr);
+                Utility.PrintArray(arr);
             }
 
             return arr; 
@@ -89,7 +85,7 @@ namespace data_structure_and_algorithms
 
         public static int[] InsertionSortAsc(int[] arr)
         {
-            PrintArray(arr);
+            Utility.PrintArray(arr);
 
             int temp, j;
 
@@ -106,7 +102,7 @@ namespace data_structure_and_algorithms
 
                 arr[j] = temp;
 
-                PrintArray(arr);
+                Utility.PrintArray(arr);
             }
 
             return arr;
