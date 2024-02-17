@@ -8,6 +8,10 @@ namespace data_structure_and_algorithms
 {
     internal class Sort
     {
+        private void PrintArray(int[] arr)
+        {
+            Console.WriteLine(string.Join(" ", arr));
+        }
         public int[] BubbleSortAsc(int[] arr)
         {
             int temp = 0;
@@ -58,7 +62,7 @@ namespace data_structure_and_algorithms
 
         public int[] SelectionSortAsc(int[] arr)
         {
-            Console.WriteLine(string.Join(" ", arr));
+            this.PrintArray(arr);
 
             int smallestIndex = 0;
             int temp = 0;
@@ -77,10 +81,35 @@ namespace data_structure_and_algorithms
                 arr[i] = arr[smallestIndex];
                 arr[smallestIndex] = temp;
 
-                Console.WriteLine(string.Join(" ", arr));
+                this.PrintArray(arr);
             }
 
             return arr; 
+        }
+
+        public int[] InsertionSortAsc(int[] arr)
+        {
+            this.PrintArray(arr);
+
+            int temp, j;
+
+            for (int i = 1; i < arr.Length; i++)
+            {
+                temp = arr[i];
+                j = i;
+
+                while (j > 0 && arr[j - 1] > temp)
+                {
+                    arr[j] = arr[j - 1];
+                    j--;
+                }
+
+                arr[j] = temp;
+
+                this.PrintArray(arr);
+            }
+
+            return arr;
         }
     }
 }
