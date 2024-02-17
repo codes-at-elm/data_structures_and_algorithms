@@ -1,4 +1,6 @@
-﻿namespace data_structure_and_algorithms
+﻿using System.Collections.Generic;
+
+namespace data_structure_and_algorithms
 {
     internal class Program
     {
@@ -18,7 +20,8 @@
             //int index = Search.BinarySearchRecursive(Sort.BubbleSortAsc(arr), 105, 0, arr.Length - 1);
             #endregion
 
-            #region
+            #region Stack
+            /*
             Stack stack = new Stack();
             stack.Pop();
             stack.Push(10);
@@ -30,6 +33,21 @@
             stack.Peek();
             Console.WriteLine("Item popped from Stack: {0}", stack.Pop());
             stack.PrintStack();
+            */
+            #endregion
+
+            #region Queue
+            /*
+            Queue<string> queue = new Queue<string>();
+            queue.Enqueue("Apple");
+            queue.Enqueue("Banana");
+            queue.Enqueue("Cherry");
+
+            Console.WriteLine($"Peek: {queue.Peek()}"); // Peek at the first item
+            Console.WriteLine($"Dequeue: {queue.Dequeue()}"); // Dequeue the first item
+            Console.WriteLine($"Peek after dequeue: {queue.Peek()}"); // Peek again
+            Console.WriteLine($"Queue size: {queue.Count}");
+            */
             #endregion
         }
     }
