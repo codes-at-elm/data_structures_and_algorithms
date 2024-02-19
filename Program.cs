@@ -64,6 +64,33 @@ namespace data_structure_and_algorithms
             Console.WriteLine(Palindrome.IsPalindrome("Palindrome")); // Should return false
             */
             #endregion
+
+            #region LinkedList
+
+            LinkedList<int> linkedList = new LinkedList<int>();
+            linkedList.Print();
+            bool status = linkedList.Remove(15);
+            status = linkedList.Contains(15);
+            Node<int>? node = linkedList.Find(15);
+            status = linkedList.Insert(15, 10);
+            linkedList.AddFirst(1);
+            linkedList.AddLast(2);
+            linkedList.AddLast(3);            
+            linkedList.Print();
+            linkedList.AddLast(5);
+            linkedList.Print();
+            linkedList.Insert(4, 3);
+            linkedList.Print();
+            linkedList.AddFirst(100);
+            linkedList.Print();
+            linkedList.Remove(100);
+            linkedList.Print();
+            status = linkedList.Contains(5);
+            node = linkedList.Find(3);
+            linkedList.Reverse(); ;
+            linkedList.Print();
+
+            #endregion
         }
     }
 }
