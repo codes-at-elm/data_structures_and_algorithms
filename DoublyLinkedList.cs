@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace data_structure_and_algorithms
 {
-    internal class LinkedList<T>
+    internal class DoublyLinkedList<T>
     {
         public Node<T>? header;
 
-        public LinkedList()
+        public DoublyLinkedList()
         {
             header = null;
         }
@@ -19,6 +20,7 @@ namespace data_structure_and_algorithms
         {
             Node<T> node = new Node<T>(value);
             node.Next = header;
+            if (header != null) { header.Previous = node; }
             header = node;
         }
 
@@ -39,6 +41,7 @@ namespace data_structure_and_algorithms
             }
 
             current.Next = newNode;
+            newNode.Previous = current;
         }
 
         public bool Remove(T value)
@@ -48,6 +51,7 @@ namespace data_structure_and_algorithms
             if (header.Value.Equals(value))
             {
                 header = header.Next;
+                header.Previous = null;
                 return true;
             }
 
@@ -57,6 +61,7 @@ namespace data_structure_and_algorithms
             {
                 if (current.Next.Value.Equals(value))
                 {
+                    current.Next.Next.Previous = current;
                     current.Next = current.Next.Next;
                     return true;
                 }
@@ -99,7 +104,9 @@ namespace data_structure_and_algorithms
                 if (current.Value.Equals(after))
                 {
                     Node<T> nodeToInsert = new Node<T>(value);
+                    current.Next.Previous = nodeToInsert;
                     nodeToInsert.Next = current.Next;
+                    nodeToInsert.Previous = current;
                     current.Next = nodeToInsert;
                     return true;
                 }
@@ -108,22 +115,6 @@ namespace data_structure_and_algorithms
             }
 
             return false;
-        }
-
-        public void Reverse()
-        {
-            Node<T> previous = null;
-            Node<T> current = header;
-
-            while (current != null)
-            {
-                Node<T> next = current.Next;
-                current.Next = previous;
-                previous = current;
-                current = next;
-            }
-
-            header = previous;
         }
 
         public void Print()

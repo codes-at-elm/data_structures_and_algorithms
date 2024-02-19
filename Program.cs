@@ -67,28 +67,53 @@ namespace data_structure_and_algorithms
 
             #region LinkedList
 
-            LinkedList<int> linkedList = new LinkedList<int>();
-            linkedList.Print();
-            bool status = linkedList.Remove(15);
-            status = linkedList.Contains(15);
-            Node<int>? node = linkedList.Find(15);
-            status = linkedList.Insert(15, 10);
-            linkedList.AddFirst(1);
-            linkedList.AddLast(2);
-            linkedList.AddLast(3);            
-            linkedList.Print();
-            linkedList.AddLast(5);
-            linkedList.Print();
-            linkedList.Insert(4, 3);
-            linkedList.Print();
-            linkedList.AddFirst(100);
-            linkedList.Print();
-            linkedList.Remove(100);
-            linkedList.Print();
-            status = linkedList.Contains(5);
-            node = linkedList.Find(3);
-            linkedList.Reverse(); ;
-            linkedList.Print();
+            //LinkedList<int> linkedList = new LinkedList<int>();
+            //linkedList.Print();
+            //bool status = linkedList.Remove(15);
+            //status = linkedList.Contains(15);
+            //Node<int>? node = linkedList.Find(15);
+            //status = linkedList.Insert(15, 10);
+            //linkedList.AddFirst(1);
+            //linkedList.AddLast(2);
+            //linkedList.AddLast(3);            
+            //linkedList.Print();
+            //linkedList.AddLast(5);
+            //linkedList.Print();
+            //linkedList.Insert(4, 3);
+            //linkedList.Print();
+            //linkedList.AddFirst(100);
+            //linkedList.Print();
+            //linkedList.Remove(100);
+            //linkedList.Print();
+            //status = linkedList.Contains(5);
+            //node = linkedList.Find(3);
+            //linkedList.Reverse(); ;
+            //linkedList.Print();
+
+            #endregion
+
+            #region DoublyLinkedList
+            DoublyLinkedList<int> doublyLinkedList = new DoublyLinkedList<int>();
+            doublyLinkedList.Print();
+            bool status = doublyLinkedList.Remove(15);
+            status = doublyLinkedList.Contains(15);
+            Node<int>? node = doublyLinkedList.Find(15);
+            status = doublyLinkedList.Insert(15, 10);
+            doublyLinkedList.AddFirst(1);
+            doublyLinkedList.AddLast(2);
+            doublyLinkedList.AddLast(3);
+            doublyLinkedList.Print();
+            doublyLinkedList.AddLast(5);
+            doublyLinkedList.Print();
+            doublyLinkedList.Insert(4, 3);
+            doublyLinkedList.Print();
+            doublyLinkedList.AddFirst(100);
+            doublyLinkedList.Print();
+            doublyLinkedList.Remove(100);
+            doublyLinkedList.Print();
+            status = doublyLinkedList.Contains(5);
+            node = doublyLinkedList.Find(3);            
+            doublyLinkedList.Print();
 
             #endregion
         }

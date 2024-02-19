@@ -10,16 +10,19 @@ namespace data_structure_and_algorithms
     {
         public T? Value { get; set; }
         public Node<T>? Next { get; set; }
+        public Node<T>? Previous { get; set; }
         public Node()
         {
             Value = default(T);
             Next = null;
+            Previous = null;
         }
 
         public Node(T? value)
         {
             Value = value;
             Next = null;
+            Previous = null;
         }
     }
 
